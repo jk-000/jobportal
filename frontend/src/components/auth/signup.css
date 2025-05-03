@@ -1,0 +1,15 @@
+.signupwrapper .text-right::before {
+    content: 'Friends!';
+}
+@media (max-width: 820px) {
+    .wrapper img, .wrapper h2 {
+        display: none; /* Hide the image and the 'Welcome' message and remove their space */
+    }
+
+    .signupwrapper{
+        display: block;
+        width: 500px;
+        text-align: center;
+        height: 600px;
+    }
+}

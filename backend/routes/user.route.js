@@ -1,0 +1,16 @@
+import express from "express";
+import { forgetpassword, login, logout, register, resetpassword, updateProfile } from "../controllers/user.controller.js";
+import isAuthenticated from "../middlewares/isAuthenticated.js";
+import { singleUpload } from "../middlewares/mutler.js";
+ 
+const router = express.Router();
+
+router.route("/register").post(singleUpload,register);
+router.route("/login").post(login);
+router.route("/logout").get(logout);
+router.route("/profile/update").post(isAuthenticated,singleUpload,updateProfile);
+router.route("/forget-password").post(forgetpassword);
+router.route("/reset-password/:token").post(resetpassword);
+
+export default router;
+
