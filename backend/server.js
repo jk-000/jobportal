@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 const corsOptions = {
-  origin: "http://localhost:5173", // update this to your frontend domain in production
+  origin: "https://jobportal-1-mn11.onrender.com", // update this to your frontend domain in production
   credentials: true,
 };
 
